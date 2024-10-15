@@ -1,0 +1,382 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+p,h1,h2,h3,h4,h5,h6,span {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+body {
+    min-width: 320px;
+    word-break: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* global */
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.button-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+    
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.item-in-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-in-colomn {
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --white-color: #fff; 
+    --letters-color-and-footer-bg-color-1: #2a2f37;
+    --button-color: #1e3daf;
+    --header-border-line:  #2A2F371F;
+    --footer-text: #a9a9a9;
+    --filters-hover-bg-color: #2A2F370F;
+    --ads-board-bg-color-04: #2A2F370A;
+    --search-bar-bg-color-02: #2A2F3705;
+    --search-bar-text-color-04:  #2a2f3766;
+    --search-and-ads-board-bg-color-08: #2A2F3714;
+}
+
+/* header -------------------------------------------------------- */
+
+.bg-color-white {
+    background-color: var(--white-color);
+}
+
+.header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 70px;
+    border-bottom: 1px solid var(--header-border-line);
+}
+
+.header-wrapper {
+    width: 80%;
+}
+
+.search-header {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--letters-color-and-footer-bg-color-1);
+    border-radius: 50%;
+    position: relative;
+    opacity: 0.4;
+}
+
+.search-header::after {
+    content: '';
+    bottom: -1px;
+    left: 10px;
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    border-radius: 20%;
+    background-color: var(--letters-color-and-footer-bg-color-1);
+    transform: rotate(37deg);
+}
+
+.place-an-ad-button {
+    width: 216px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white-color);
+    background-color: var(--button-color);
+    padding: 12px 16px;
+}
+
+.human-img {
+    padding-right: 10px;
+}
+
+.login-button {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--letters-color-and-footer-bg-color-1);
+    padding: 5px 5px 5px 25px;
+    margin-right: 50px;
+}
+
+/* hero -------------------------------------------------------- */
+
+.hero {
+    background-color: var(--white-color);
+}
+
+.hero-title {
+    font-weight: 700px;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.hero-wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-image: url(../images/hero/hero-pic.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.hero-text {
+    width: 465px;
+    height: 72px;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.6;
+    color: var(--letters-color-and-footer-bg-color-1);
+}
+
+.input-bar {
+    width: 465px;
+    height: 48px;
+    font-weight: 400px;
+    padding-left: 10px;
+    color: var(--search-bar-text-color-04);
+    border: 1px solid var(--search-and-ads-board-bg-color-08);
+    background-color: var(--search-bar-bg-color-02);
+}
+
+
+.search-hero {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--letters-color-and-footer-bg-color-1);
+    border-radius: 50%;
+    position: relative;
+    top: 70px;
+    left: 425px;
+    opacity: 0.4;
+}
+
+.search-hero::after {
+    content: '';
+    bottom: -1px;
+    left: 10px;
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    border-radius: 20%;
+    background-color: var(--letters-color-and-footer-bg-color-1);
+    transform: rotate(37deg);
+}
+
+/* filters-bar ------------------------------------------------ */
+
+.ads-board-bg-color {
+    background-color: var(--ads-board-bg-color-04);
+
+}
+
+.filters-bar-wrapper {
+    width: 630px;
+    height: 19px;
+    padding: 40px 0 80px 0;
+}
+
+.filters-bar-button {
+    height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--letters-color-and-footer-bg-color-1);
+    padding: 8px 16px;
+}
+
+.filters-bar-button:hover {
+    background-color: var(--search-bar-text-color-04);
+}
+
+.filters-bar-button:focus {
+    background-color: var(--button-color);
+    color: var(--white-color);
+}
+
+/* ads-board -------------------------------------------------------- */
+
+.ads-board-title {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 40px;
+}
+
+.ad-cards-wrapper {
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 363px);
+    grid-gap: 40px;
+}
+
+.ad-card {
+    width: 363px;
+    height: 450px;
+    background-color: var(--white-color);
+    cursor: pointer;
+}
+
+.ad-card-title {
+    font-weight: 700px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.ad-card-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.8;
+    margin-top: 25px;
+    margin-left: 20px;
+    padding-bottom: 30px;
+}
+
+.ad-card-product-price {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    padding-left: 285px;
+}
+
+.ad-card-bottom {
+    display: flex;
+    justify-content: space-around;
+    gap: 110px;
+    padding-top: 30px;
+    color: var(--search-bar-text-color-04);
+}
+
+.views-statistic {
+    margin-right: 10px;
+}
+
+.ad-card-img {
+    padding-right: 10px;
+}
+
+.ad-cards-button {
+    width: 78px;
+    height: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--white-color);
+    background-color: var(--button-color);
+    padding: 9px 12px;
+    position: relative;
+    left: 20px;
+    bottom: 285px;
+}
+
+.download-more-button {
+    width: 245px;
+    height: 50px;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 160px;
+    margin-left: 462px;
+    padding-left: 45px;
+    border: 1px solid var(--letters-color-and-footer-bg-color-1);
+}
+
+.load-more-img {
+    padding-right: 10px;
+}
+
+/* footer ----------------------------------------------------- */
+
+/* top-floor */
+
+.footer-bg-color {
+    background-color: var(--letters-color-and-footer-bg-color-1);
+    width: 1170px;
+    height: 305px;
+    margin: 0px auto;
+    color: var(--white-color);
+}
+
+.footer-top-floor {
+    padding-top: 50px; 
+}
+
+.footer-logo-and-text-wrapper {
+    display: flex;
+}
+
+.inst-logo {
+    opacity: 0.4;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.logo-left-side-text {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 40px;
+    padding-left: 40px;
+    border-left: 1px solid var(--footer-text);
+    color: var(--footer-text);
+}
+
+/* middle-floor */
+
+.footer-middle-floor {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+/* bottom-floor */
+
+.footer-bottom-floor {
+    padding-top: 30px;
+    border-top: 1px solid var(--white-color);
+    opacity: 0.4;
+}
